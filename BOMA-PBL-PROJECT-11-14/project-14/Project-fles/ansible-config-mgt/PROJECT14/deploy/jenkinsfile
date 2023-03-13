@@ -1,0 +1,17 @@
+   pipeline {
+    agent any
+
+  stages {
+    stage('SCM Checkout') {
+      steps {
+         git branch: 'main', url: 'https://github.com/nbomasi/ansible-config-mgt.git' 
+      }
+    }
+
+    stage('run-ansible-playbook') {
+      steps {
+        ansiblePlaybook colorized: true, credentialsId: 'gpckey1', disableHostKeyChecking: true, installation: 'myansible', inventory: 'PROJECT14/inventory/dev.yml', playbook: 'PROJECT14/playbooks/testing.yml'
+      }
+    }
+    }
+}

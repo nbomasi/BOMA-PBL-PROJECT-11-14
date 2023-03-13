@@ -1,0 +1,20 @@
+---
+#- hosts: uat-webservers
+#- import_playbook: ../static-assignments/uat-webservers.yml
+
+- hosts: apache
+- name: installing apache on redhat 
+  import_playbook: ../webserver/tasks/main.yml
+#  import_playbook: ../static-assignments/common.yml 
+#  include: ../dynamic-assignments/env-vars.yml
+#  tags:
+#    - always
+
+#- hosts: uat-webservers
+#- name: Webserver assignment
+#  import_playbook: ../static-assignments/uat-webservers.yml
+
+- hosts: nginx
+- name: installing nginx on ubuntu
+  import_playbook: ../webserver/nginx/main.yml
+#  when: load_balancer_is_required 
