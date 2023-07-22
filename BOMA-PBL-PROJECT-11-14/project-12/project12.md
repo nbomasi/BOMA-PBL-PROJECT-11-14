@@ -75,6 +75,8 @@ Note: You can configure number of builds to keep in order to save space on the s
 
 If both Jenkins jobs have completed one after another – you shall see your files inside `/home/ubuntu/ansible-config-artifact` directory and it will be updated with every commit to your master branch.
 
+**NOTE**: For a successful build of save-artifact, you must change both the ownership and permission of ansible-config-artifact to ubuntu and 777 respectively, change ubuntu permission to 777
+
 ![build testing](./Images/testing%20build.PNG)
 
 Now your Jenkins pipeline is more neat and clean.
