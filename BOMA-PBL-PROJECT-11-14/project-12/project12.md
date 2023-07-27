@@ -285,9 +285,8 @@ although the was no default role_path, so I had to include it as below:, while t
 
 
 [defaults]
-``
-roles_path    = /home/ubuntu/ansible-config-mgt/roles
-``
+
+``roles_path    = /home/ubuntu/ansible-config-mgt/roles``
 
 Also note that ssh-agent forwarding is not working vscode or powershell terminal, I had to use gitbash or wsl to run my ansible
 
