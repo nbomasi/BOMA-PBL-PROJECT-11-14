@@ -285,6 +285,7 @@ although the was no default role_path, so I had to include it as below:, while t
 
 ``
 [defaults]
+
 roles_path    = /home/ubuntu/ansible-config-mgt/roles
 ``
 
