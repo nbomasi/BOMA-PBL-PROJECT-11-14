@@ -282,9 +282,10 @@ http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
 
 **NOTE:** When I used ansible 2.10 on unbuntu 22.04 there was no default ansible-cfg file,hence, **ansible gave role errors** But when I used ansible 2.15 on 22.04, the ansible-cfg was present, 
 although the was no default role_path, so I had to include it as below:, while the [defaults] is the header
-``[defaults]
-roles_path    = /home/ubuntu/ansible-config-mgt/roles``
-
+``
+[defaults]
+roles_path    = /home/ubuntu/ansible-config-mgt/roles
+``
 Also note that ssh-agent forwarding is not working vscode or powershell terminal, I had to use gitbash or wsl to run my ansible
 
 
